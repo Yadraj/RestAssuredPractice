@@ -24,6 +24,8 @@ public class JacksonSerialization {
         bookingdates.setCheckin("2018-01-01");
         bookingdates.setCheckout("2019-01-01");
 
+        booking.setBookingdates(bookingdates);
+
 
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(booking);
